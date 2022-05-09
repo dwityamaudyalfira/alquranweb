@@ -1,36 +1,30 @@
 <template>
   <section class="semua" style="background-color: #FAE7DB;">
-  <section class="hero is-small">
-    <div class="hero-body">
-      <p class="title">
-        Surah Al-Fatihah
-      </p>
-      <p v-if="info">{{info.text}}</p>
-    </div>
-  </section>
-  <section>
-    <h1 class="has-text-right awal" v-if="chapter">{{chapter.name_arabic}}
-      <br>{{chapter.verses_count}} Ayat</h1>
-    <hr>
-    <div v-for="verse in verses">
-      <p class="has-text-right quran">
-        {{verse.text_uthmani}} {{verse.verse_key}}
-      </p>
+    <section class="hero is-small">
+      <div class="hero-body">
+        <p class="title">
+          Surah Ali 'Imran
+        </p>
+        <p v-if="info">{{info.text}}</p>
+      </div>
+    </section>
+    <section>
+      <h1 class="has-text-right awal" v-if="chapter">{{chapter.name_arabic}}
+        <br>{{chapter.verses_count}} Ayat</h1>
       <hr>
-    </div>
-    <p v-if="audio" class="has-text-right">
-      <audio controls>
-        <source :src=audio type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </p>
-  </section>
+      <div v-for="verse in verses">
+        <p class="has-text-right quran">
+          {{verse.text_uthmani}} {{verse.verse_key}}
+        </p>
+        <hr>
+      </div>
+    </section>
   </section>
 </template>
 
 <script>
 export default {
-  name: "AlFatihah",
+  name: "AliImran",
   data(){
     return{
       chapter: null,
@@ -40,7 +34,7 @@ export default {
   },
   methods: {
     async getChapter(){
-      fetch('https://api.quran.com/api/v4/chapters/1?language=id',{
+      fetch('https://api.quran.com/api/v4/chapters/3?language=id',{
         method: 'GET'
       })
         .then(response => {
@@ -53,7 +47,7 @@ export default {
         })
     },
     async getVerses(){
-      fetch('https://api.quran.com/api/v4/quran/verses/uthmani?chapter_number=1', {
+      fetch('https://api.quran.com/api/v4/quran/verses/uthmani?chapter_number=3', {
         method: 'GET'
       })
         .then(res =>{
@@ -66,7 +60,7 @@ export default {
         })
     },
     async getInfo(){
-      fetch('https://api.quran.com/api/v4/chapters/1/info?language=id', {
+      fetch('https://api.quran.com/api/v4/chapters/3/info?language=id', {
         method: 'GET'
       })
         .then(res =>{
@@ -93,7 +87,7 @@ export default {
   text-align: right;
 }
 .semua{
-padding: 50px;
+  padding: 50px;
 }
 .awal{
   text-align: center;

@@ -2,7 +2,7 @@
   <footer class="footer" style="background-color: transparent">
     <div class="content has-text-centered">
       <p>
-        <strong>Website Al-Quran</strong> by <a href="">Dwitya Maudy Alfira</a>
+        <strong>Website Al-Quran</strong> by <a href="https://github.com/dwityamaudyalfira/alquranweb">Dwitya Maudy Alfira</a>
         &copy; {{year}}
       </p>
     </div>
