@@ -221,7 +221,7 @@ const routes = [
     }
   },
   {
-    path: '/ananfal',
+    path: '/alanfal',
     name: 'alanfal',
     component: ALAnfal,
     meta: {
