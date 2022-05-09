@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-light" style="background-image: url('src/assets/bgnavbar.png');">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/surah">
         <img src="src/assets/logo2.png" alt="" width="100" height="100" class="d-inline-block align-text-middle">
         Quran.com by Dwitya Maudy Alfira
       </a>
