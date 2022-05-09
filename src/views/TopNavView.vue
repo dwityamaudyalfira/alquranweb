@@ -6,7 +6,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="/surah">
         <img
-          src="src/assets/logo2.png"
+          src="src/assets/logo3.svg"
           alt=""
           class="d-inline-block align-text-middle"
         />
