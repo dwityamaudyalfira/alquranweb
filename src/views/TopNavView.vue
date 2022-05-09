@@ -4,14 +4,6 @@
     style="background-image: url('src/assets/bgnavbar.png')"
   >
     <div class="container-fluid">
-      <a class="navbar-brand" href="/surah">
-        <img
-          src="src/assets/logo3.svg"
-          alt=""
-          class="d-inline-block align-text-middle"
-        />
-        Quran.com by Dwitya Maudy Alfira
-      </a>
       <button
         class="navbar-toggler"
         type="button"
