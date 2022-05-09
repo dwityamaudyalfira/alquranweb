@@ -13,7 +13,7 @@
 @media (min-width: 1280px) {
   header.y {
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
   }
   header.y .h1 {
     padding-top: 50px;

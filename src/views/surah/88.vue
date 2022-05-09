@@ -3,9 +3,9 @@
     <section class="hero is-small">
       <div class="hero-body">
         <p class="title">
-          Surah An-Nas
+          Surah Al-Gasyiyah
         </p>
-        <p class="has-text-right info" v-if="info">{{info.chapter_info}}</p>
+        <p v-if="info">{{info.text}}</p>
       </div>
     </section>
     <section>
@@ -18,13 +18,19 @@
         </p>
         <hr>
       </div>
+      <p v-if="audio" class="has-text-right">
+        <audio controls>
+          <source :src=audio type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
     </section>
   </section>
 </template>
 
 <script>
 export default {
-  name: "AlFatihah",
+  name: "88",
   data(){
     return{
       chapter: null,
@@ -34,7 +40,7 @@ export default {
   },
   methods: {
     async getChapter(){
-      fetch('https://api.quran.com/api/v4/chapters/114?language=id',{
+      fetch('https://api.quran.com/api/v4/chapters/88?language=id',{
         method: 'GET'
       })
         .then(response => {
@@ -47,7 +53,7 @@ export default {
         })
     },
     async getVerses(){
-      fetch('https://api.quran.com/api/v4/quran/verses/uthmani?chapter_number=114', {
+      fetch('https://api.quran.com/api/v4/quran/verses/uthmani?chapter_number=88', {
         method: 'GET'
       })
         .then(res =>{
@@ -60,7 +66,7 @@ export default {
         })
     },
     async getInfo(){
-      fetch('https://api.quran.com/api/v4/chapters/114?language=id', {
+      fetch('https://api.quran.com/api/v4/chapters/88/info?language=id', {
         method: 'GET'
       })
         .then(res =>{
